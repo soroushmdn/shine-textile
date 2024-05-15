@@ -1,0 +1,81 @@
+.home-coworkers {
+  .container {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+
+      .card {
+        background-image: url('../img/mesh.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: grid;
+        place-items: center;
+        height: 128px;
+
+        box-shadow: var(--box-shadow);
+      }
+
+      .card:nth-child(odd) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+/* 
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (max-width: 1440px) {
+  .home-coworkers {
+    .container {
+      .cards {
+        gap: 2rem;
+
+        .card {
+          height: 112px;
+
+          img {
+            width: 96px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-coworkers {
+    .container {
+      .cards {
+        gap: 1.5rem;
+
+        .card {
+          height: 96px;
+
+          img {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-coworkers {
+    .container {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 1.5rem;
+
+        .card:nth-child(odd) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
